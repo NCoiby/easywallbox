@@ -1,0 +1,40 @@
+---
+
+########## GENERAL SETTINGS ######################################################################################################
+name: easywallbox
+image: Ncoiby/easywallbox
+version: 0.0.1
+slug: easywallbox
+description: Easywallbox to MQTT Bridge
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+url: https://github.com/NCoiby/easywallbox.git
+services:
+  - mqtt:need
+
+########## DEFAULT OPTIONS #######################################################################################################
+options:
+  WALLBOX_ADDRESS: 8C:F6:81:AD:B8:3E
+  WALLBOX_PIN: 7111
+  MQTT_HOST: homeassistant
+  MQTT_USER: ''
+  MQTT_PASSWORD: ''
+  MQTT_PORT: 1883
+  MQTT_SSL: false
+  LOG_LEVEL: INFO
+
+########## OPTIONS SCHEMA ########################################################################################################
+schema:
+  LOG_LEVEL: list(DEBUG|INFO|WARNING|ERROR)?
+  WALLBOX_ADDRESS: str?
+  WALLBOX_PIN: str?
+  TYDOM_PASSWORD: password
+  MQTT_HOST: str?
+  MQTT_USER: str?
+  MQTT_PASSWORD: password?
+  MQTT_PORT: port?
+  MQTT_SSL: bool?
