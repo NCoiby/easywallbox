@@ -3,7 +3,7 @@ import asyncio
 
 from bleak import BleakClient
 
-ADDRESS = "8C:F6:81:AD:B8:3E" #MAC ADDESS easywallbox
+ADDRESS = "84:2E:14:9F:8D:AB" #MAC ADDESS easywallbox
 
 BLUETOOTH_WALLBOX_RX = "a9da6040-0823-4995-94ec-9ce41ca28833";
 BLUETOOTH_WALLBOX_SERVICE = "331a36f5-2459-45ea-9d95-6142f0c4b307";
@@ -20,7 +20,7 @@ SET_USER_LIMIT_1 = "$EEP,WRITE,IDX,174,80\n" #220 => 22.0A
 SET_DPM_OFF = "$EEP,WRITE,IDX,178,0\n";
 SET_DPM_ON = "$EEP,WRITE,IDX,178,1\n";
 
-BLE_AUTH = b'$BLE,AUTH,9844\n'
+BLE_AUTH = b'$BLE,AUTH,7111\n'
 
 rx_buffer = "";
 st_buffer = "";
