@@ -19,8 +19,8 @@ mqttClient = None
 
 class EasyWallbox:
 
-    WALLBOX_ADDRESS = os.getenv('WALLBOX_ADDRESS', '8C:F6:81:AD:B8:3E')
-    WALLBOX_PIN = os.getenv('WALLBOX_PIN', '9844')
+    WALLBOX_ADDRESS = os.getenv('WALLBOX_ADDRESS', '84:2E:14:9F:8D:AB')
+    WALLBOX_PIN = os.getenv('WALLBOX_PIN', '7111')
 
     WALLBOX_RX = "a9da6040-0823-4995-94ec-9ce41ca28833";
     WALLBOX_SERVICE = "331a36f5-2459-45ea-9d95-6142f0c4b307";
@@ -89,10 +89,10 @@ class EasyWallbox:
 
 async def main():
     global client
-    mqtt_host = os.getenv('MQTT_HOST', '192.168.2.70')
+    mqtt_host = os.getenv('MQTT_HOST', '192.168.1.22')
     mqtt_port = os.getenv('MQTT_PORT', 1883)
-    mqtt_username = os.getenv('MQTT_USERNAME', "")
-    mqtt_password = os.getenv('MQTT_PASSWORD', "")
+    mqtt_username = os.getenv('MQTT_USERNAME', "mqtt")
+    mqtt_password = os.getenv('MQTT_PASSWORD', "Choc@pic12")
 
     
     queue = asyncio.Queue()
